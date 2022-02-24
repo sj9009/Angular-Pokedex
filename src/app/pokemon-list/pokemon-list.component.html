@@ -1,0 +1,8 @@
+<div class="poke-contan">
+    <div class="pokemon-card">
+        <div class="box" *ngFor="let pokemon of pokemons">
+            <img [src]="pokemon.sprites.front_default" class="img-con" alt="pokemon">
+            <h3>{{pokemon.name}}</h3>
+        </div>
+    </div>
+</div>
