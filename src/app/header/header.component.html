@@ -7,15 +7,21 @@
       </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>
-      <mat-toolbar class="header">
+      <mat-toolbar color="primary">
         <button type="button" mat-icon-button (click)="sidenav.toggle()"><mat-icon class="ham">menu</mat-icon></button>
       </mat-toolbar>
       <div class="container">
         <h1>Pokedex.org</h1>
-        <form class="example" action="" id="form">
+        <h2 mat-h2>{{someDate | async | date:'medium'}}</h2>
+        <!-- <form class="example" action="" id="form">
             <input type="text" placeholder="Search for Pokemon" id="search" class="search">
             <button type="submit"><mat-icon>search</mat-icon></button>
-        </form>
+        </form> -->
+        <mat-form-field appearance="outline" class="search">
+          <mat-label>Search</mat-label>
+          <input matInput [formControl]="searchControl" #searchInput/>
+          <mat-icon matSuffix [color]="searchInput == doc.activeElement ?  'primary' : ''">search</mat-icon>
+        </mat-form-field>
       </div>
       <app-pokemon-list></app-pokemon-list>
     </mat-sidenav-content>

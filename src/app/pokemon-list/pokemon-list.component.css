@@ -1,5 +1,7 @@
-.poke-contan{
+.poke-contaner{
     align-items: center;
+    overflow: auto;
+    height: 50vh;
 }
 
 .pokemon-card{
