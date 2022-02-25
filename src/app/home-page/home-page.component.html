@@ -1,0 +1,8 @@
+<div class="container">
+  <mat-form-field appearance="outline" class="search">
+    <mat-label>Search</mat-label>
+    <input matInput [formControl]="searchControl" #searchInput/>
+    <mat-icon matSuffix [color]="searchInput == doc.activeElement ?  'primary' : ''">search</mat-icon>
+  </mat-form-field>
+  <app-pokemon-list></app-pokemon-list>
+</div>

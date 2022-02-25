@@ -5,18 +5,20 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HeaderComponent } from './header/header.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PokemonListComponent } from './pokemon-list/pokemon-list.component';
+import { HomePageComponent } from './home-page/home-page.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    PokemonListComponent
+    PokemonListComponent,
+    HomePageComponent
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
     MaterialModule,
