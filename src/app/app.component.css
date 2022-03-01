@@ -1,12 +1,18 @@
 mat-sidenav-container {
-  height: 100%;
+  height: 92vh;
+}
+mat-toolbar{
+  height: 8vh;
+}
+
+#sidedraw{
+  width: 200px;
 }
 .content{
   display: flex;
   flex-direction: column;
   height: 100%;
 }
-
 .page-container {
   flex: 1 1 100%;
 }

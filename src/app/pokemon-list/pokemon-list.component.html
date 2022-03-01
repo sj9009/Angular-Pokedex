@@ -1,8 +1,12 @@
-<div class="poke-contaner" (scroll)="onScroll($event)">
-    <div class="pokemon-card">
-        <div class="box" *ngFor="let pokemon of pokemons | async">
-            <img [src]="pokemon.sprites.front_default" class="img-con" alt="pokemon">
-            <h3>{{pokemon.name}}</h3>
+<!-- <div class="poke-container" (scroll)="onScroll($event)"></div> -->
+<!-- <cdk-virtual-scroll-viewport class="viewport" itemSize="120"> -->
+    <div class="poke-container" >
+        <div class="pokemon-card" *ngFor="let pokemon of pokemons | async">
+            <mat-card color>
+                <img [src]="pokemon.sprites.front_default" class="img-con" alt="pokemon" mat-card-image>
+                <mat-card-content class="pokname">{{pokemon.name}}</mat-card-content>
+            </mat-card>
         </div>
     </div>
-</div>
+<!-- </cdk-virtual-scroll-viewport> -->
+<!-- </div> -->

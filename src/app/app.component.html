@@ -1,17 +1,19 @@
+<mat-toolbar color="primary">
+  <button type="button" mat-icon-button (click)="sidenav.toggle()"><mat-icon class="ham">menu</mat-icon></button>
+  <h1>Pokedex</h1>
+</mat-toolbar>
+
 <mat-sidenav-container>
-  <mat-sidenav #sidenav mode="side">
-    <mat-toolbar></mat-toolbar>
+  <mat-sidenav #sidenav mode="side" id="sidedraw">
+    <!-- <mat-toolbar>Pokedex Org</mat-toolbar> -->
     <mat-nav-list>
       <a mat-list-item href="#">Pokedex</a>
       <a mat-list-item href="#">About</a>
     </mat-nav-list>
   </mat-sidenav>
+
   <mat-sidenav-content>
     <div class="content">
-      <mat-toolbar color="primary">
-        <button type="button" mat-icon-button (click)="sidenav.toggle()"><mat-icon class="ham">menu</mat-icon></button>
-        <h1>Pokedex.org</h1>
-      </mat-toolbar>
       <!-- <app-home-page style="width: 100;"></app-home-page> -->
       <div class="page-container">
         <router-outlet></router-outlet>
